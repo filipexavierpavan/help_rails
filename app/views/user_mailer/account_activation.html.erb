@@ -1,0 +1,9 @@
+<h1>Help App</h1>
+
+<p>Oi <%= @user.name %>,</p>
+
+<p>
+  Bem vindo ao Help App! Clique no link abaixo para ativar sua conta:
+</p>
+
+<%= link_to "Ativar", edit_account_activation_url(@user.activation_token, email: @user.email) %>
